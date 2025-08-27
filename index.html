@@ -12,33 +12,41 @@
         <h1 class="header">Expense Tracker</>
     </div>
     <div class="container">
+        <!-- design -->
+         <div class="bg-img">
+            <img src="bg-2.jpg" alt="">
+         </div>
+         <!-- <div class="design1"></div>
+         <div class="design2"></div>
+         <div class="design3"></div> -->
         <!-- Form -->
          <div class="form-container">
             <h2>Add New Expense</h2>
             <form id="expenseForm">
                 <div class="field-group">
-                    <label for="name">Expense name</label>
+                    <label for="name">Expense name *</label>
                     <input type="text" name="name" id="name" required>
                 </div>
                 <div class="field-group">
-                    <label for="amount">Amount</label>
+                    <label for="amount">Amount *</label>
                     <input type="number" name="amount" id="amount" required>
                 </div>
                 <div class="field-group">
-                    <label for="name">Date</label>
+                    <label for="name">Date *</label>
                     <input type="date" name="date" id="date" required>
                 </div>
+                <!-- Add category -->
+                 <div class="field-group add-category-form">
+                    <!-- <form action="" id="add-category-form"> -->
+                        <label for="add-category">Add category</label>
+                        <input type="text" name="add-category" id="category-name">
+                        <button type="submit" class="btn btn-sm add-category--btn">Add</button>
+                    <!-- </form> -->
+                 </div>
                 <div class="field-group">
-                    <label for="category">Category</label>
+                    <label for="category">Category *</label>
                     <select class="field-group" id="category" required>
-                        <option value="" selected>select option</option>
-                        <option value="food">food</option>
-                        <option value="transportation">Transportation</option>
-                        <option value="bills">Bills & Utilities</option>
-                        <option value="education">Education</option>
-                        <option value="personal">Personal & Lifestyle</option>
-                        <option value="entertainment">Entertainment</option>
-                        <option value="health">Healthcare</option>
+                        <option value="" disabled selected>select option</option>
                     </select>
                 </div>
                 <div class="field-group" id="form-buttons">
@@ -49,6 +57,13 @@
          </div>
 
          <div class="table-container">
+            <h2>Expense List</h2>
+            <div class="category-filter">
+                <label for="category-filter">Filter by category:</label>
+                <select id="category-filter">
+                    <option value="all">All</option>
+                </select>
+            </div>
             <table id="expenseTable">
                 <thead class="table-header">
                     <th>No.</th>
