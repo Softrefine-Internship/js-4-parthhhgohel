@@ -151,6 +151,7 @@ getCategoryFromLocal();
 
 // load filter category
 function loadFilterCategory() {
+  categoryFilter.innerHTML = "";
   categoryData.forEach(function (data) {
     categoryFilter.innerHTML += `<option value="${data}">${data}</option>`;
   });
